@@ -17,6 +17,10 @@
 
 `yt-dlp --format "{{bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]}}" "{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}"`
 
+- Download a video or playlist limiting the filesize to 80M or downloading the worst video and audio if there is no option below 80 M. (See format examples: <https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#format-selection-examples>):
+
+`yt-dlp --format "{{b[filesize<80M] / w]}}" "{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}"`
+
 - Extract audio from a video (requires ffmpeg or ffprobe):
 
 `yt-dlp --extract-audio "{{https://www.youtube.com/watch?v=oHg5SJYRHA0}}"`
